@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/springboot-library-base/springboot-library-base.iml" filepath="$PROJECT_DIR$/springboot-library-base/springboot-library-base.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-library-parent/springboot-library-parent.iml" filepath="$PROJECT_DIR$/springboot-library-parent/springboot-library-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-library-test/springboot-library-test.iml" filepath="$PROJECT_DIR$/springboot-library-test/springboot-library-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootlibrary.iml" filepath="$PROJECT_DIR$/springbootlibrary.iml" />
     </modules>
   </component>

@@ -7,12 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-library-base" />
+        <module name="springboot-library-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="springboot-library-base" target="1.5" />
-      <module name="springboot-library-parent" target="1.5" />
-      <module name="springbootlibrary" target="1.5" />
+      <module name="springboot-library-base" target="1.8" />
+      <module name="springboot-library-parent" target="1.8" />
+      <module name="springboot-library-test" target="1.8" />
+      <module name="springboot-library-web" target="1.7" />
+      <module name="springbootlibrary" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
