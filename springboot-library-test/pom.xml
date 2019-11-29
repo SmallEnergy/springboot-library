@@ -27,5 +27,12 @@
             <groupId>cn.smallenergy</groupId>
             <artifactId>springboot-library-base</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.58</version>
+        </dependency>
+
     </dependencies>
 </project>
