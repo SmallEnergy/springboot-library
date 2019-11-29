@@ -28,4 +28,17 @@ public class TestLog {
         //logger.warn("Warn 日志1...");
         //logger.error("Error 日志1...");
     }
+
+    @Test
+    public void testJson() {
+        testController.logicException();
+
+        //Log.getInstance(this).info("Info 日志222...");
+        //logger.trace("Trace 日志1...");
+        //logger.debug("Debug 日志1...");
+        logger.info("Info 日志testJson...");
+        //logger.warn("Warn 日志1...");
+        //logger.error("Error 日志1...");
+    }
+
 }
