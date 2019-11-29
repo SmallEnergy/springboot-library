@@ -10,7 +10,7 @@ import java.util.Map;
  * @author xy
  */
 public class RestTemplateUtils {
-    /**请求超时时间*/
+    /**请求超时时间 毫秒*/
     private final  static int TIMI_OUT=60*1000;
 
     /**单例*/
