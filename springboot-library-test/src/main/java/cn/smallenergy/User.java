@@ -22,4 +22,12 @@ public class User {
     public void setUsername(String username) {
         Username = username;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "Id='" + Id + '\'' +
+                ", Username='" + Username + '\'' +
+                '}';
+    }
 }

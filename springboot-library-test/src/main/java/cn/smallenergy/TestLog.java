@@ -19,8 +19,8 @@ public class TestLog {
     @Test
     @OperateLog("bbb")
     public void testLog() {
-        String result = testController.getTest();
-        System.out.print("pppppp" + result);
+        User user = testController.getUser();
+        System.out.print("pppppp" + user.toString());
         //Log.getInstance(this).info("Info 日志222...");
         //logger.trace("Trace 日志1...");
         //logger.debug("Debug 日志1...");

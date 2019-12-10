@@ -1,10 +1,11 @@
 package cn.smallenergy;
 
 import cn.smallenergy.base.http.RestTemplateUtils;
-import cn.smallenergy.base.log.Log;
 import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -13,15 +14,15 @@ import java.util.HashMap;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class TestRestTemplateUtils {
-
-//    @Test
+    Logger logger = LoggerFactory.getLogger(getClass());
+   @Test
     public void testGet(){
         HashMap map  = new HashMap<String,String>();
         map.put("siteid","kf_99991");
         map.put("userid","kf_99991_00001");
-        String url = "http://localhost:80/kpi/api/v1/dashboard/dbd_performance_anaylsis/layout";
-        RestTemplateUtils.RespBody result = RestTemplateUtils.get(url, map,JSONObject.class);
-        Log.getInstance().info(result.getRespCode()+"  "+result.getRespValue()+"____"+result.getEntity());
+        String url = "https://nx-v8-g1-trail.ntalker.com/skyeye/enterprises/ux_1000/tracks/nt?nt_id=00fa4bdd-f02b-4ca4-8049-e535b04a2799&nav=all&page=1&per_page=5";
+        //RestTemplateUtils.RespBody result = RestTemplateUtils.get(url, map,JSONObject.class);
+        //logger.info(result.getRespCode()+"  "+result.getRespValue()+"____"+result.getEntity());
     }
 
 //    @Test
@@ -36,7 +37,7 @@ public class TestRestTemplateUtils {
         String jsonStr = "{\"time\":{\"starttime\":\"2019-11-26 00:00:00\",\"endtime\":\"2019-11-27 00:00:00\"},\"conditions\":[{\"operation\":\"in\",\"type\":\"String\",\"name\":\"cs_id\",\"values\":[]},{\"operation\":\"in\",\"type\":\"String\",\"name\":\"cs_group_id\",\"values\":[]},{\"operation\":\"in\",\"type\":\"String\",\"name\":\"groupid\",\"values\":[]}]}";
         JSONObject jsonCondition = JSONObject.parseObject(jsonStr);
         RestTemplateUtils.RespBody result = RestTemplateUtils.put(url, jsonCondition.toJSONString(), map,JSONObject.class);
-        Log.getInstance().info(result.getRespCode()+"____"+result.getRespValue()+"____"+result.getEntity().toString());
+        logger.info(result.getRespCode()+"____"+result.getRespValue()+"____"+result.getEntity().toString());
     }
 
 
@@ -47,7 +48,7 @@ public class TestRestTemplateUtils {
         String jsonStr = "{\"time\":{\"starttime\":\"2019-11-26 00:00:00\",\"endtime\":\"2019-11-27 00:00:00\"},\"conditions\":[{\"operation\":\"in\",\"type\":\"String\",\"name\":\"cs_id\",\"values\":[]},{\"operation\":\"in\",\"type\":\"String\",\"name\":\"cs_group_id\",\"values\":[]},{\"operation\":\"in\",\"type\":\"String\",\"name\":\"groupid\",\"values\":[]}]}";
         JSONObject jsonCondition = JSONObject.parseObject(jsonStr);
         RestTemplateUtils.RespBody result = RestTemplateUtils.put(url, jsonCondition.toJSONString(), JSONObject.class);
-        Log.getInstance().info(result.getRespCode()+"____"+result.getRespValue()+"____"+result.getEntity());
+            logger.info(result.getRespCode()+"____"+result.getRespValue()+"____"+result.getEntity());
     }
 
 
@@ -59,7 +60,7 @@ public class TestRestTemplateUtils {
         JSONObject jsonCondition = JSONObject.parseObject(jsonStr);
 
         RestTemplateUtils.RespBody result = RestTemplateUtils.post(url,jsonCondition.toJSONString(),null,String.class);
-        Log.getInstance().info(result.getRespCode()+"  "+result.getRespValue()+"____"+result.getEntity().toString());
+        logger.info(result.getRespCode()+"  "+result.getRespValue()+"____"+result.getEntity().toString());
     }
 
 
